@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class stat1
+{
+	private:
+		int num;
+		static int count;
+		
+	public:
+		stat1()
+		{
+			count++;
+			num=count;
+			cout<<"\nThis Is The Object Number:"<<num;
+		}
+		static void showcount()
+		{
+			cout<<"\nTotal Number Of Objects:"<<count; 
+		}
+};
+
+int stat1::count;
+int main()
+{
+	stat1 test1,test2,test3,test4;
+	test1.showcount();
+	return 0;
+}
+
