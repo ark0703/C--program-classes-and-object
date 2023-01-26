@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+struct Emp
+{
+	private:
+		string name;
+		int balance,ac_no,withdraw,deposit;
+		
+	public:
+		void emp_det()
+		{
+			cout<<"Enter Your Name:";
+			cin>>name;
+			cout<<"Enter Your Account Number:";
+			cin>>ac_no;
+			cout<<"Enter Your Balance:";
+			cin>>balance;
+		}
+		void emp_with()
+		{
+			cout<<"\n\nEnter Your Amount to be withdrawed:";
+			cin>>withdraw;
+			balance=balance-withdraw;
+		}
+		void emp_depo()
+		{
+			cout<<"\n\nEnter Your Amount to be deposited:";
+			cin>>deposit;
+			balance=balance+deposit;
+		}
+		void emp_print()
+		{
+			cout<<"\n\nYour Name:"<<name<<endl<<"Your Account No.:"<<ac_no<<endl<<"Your Balance:"<<balance;
+		}	
+};
+
+int main()
+{
+	Emp emp1;
+	emp1.emp_det();
+	emp1.emp_print();
+	emp1.emp_with();
+	emp1.emp_depo();
+	emp1.emp_print();
+	return 0;
+}
